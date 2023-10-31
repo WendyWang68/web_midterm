@@ -36,7 +36,7 @@ export default function Home({ catFactsData, picData }) {
   }, []);
 
   return (
-    <div>
+    <div style={{ backgroundColor: 'rgb(229, 204, 255)' }}>
       <Head>
         <title>Fun Cat Facts</title>
         <meta name="description" content="Interesting and Fun Cat Facts" />

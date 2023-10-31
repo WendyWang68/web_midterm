@@ -6,7 +6,7 @@ import "../app/globals.css";
 
 const Home = () => {
   const [catImage, setCatImage] = useState(null);
-  const [width, setWidthImage] = useState(0);
+  const [height, setHeight] = useState(0);
 
   const fetchNewCatImage = async () => {
     try {
@@ -14,7 +14,7 @@ const Home = () => {
       const data = await response.json();
       if (data && data.length > 0) {
         setCatImage(data[0].url);
-        setWidthImage(data[2].url)
+        setHeight(data[0].height);
       }
     } catch (error) {
       console.error('Error fetching cat image:', error);
@@ -25,8 +25,18 @@ const Home = () => {
     fetchNewCatImage();
   }, []);
 
+  const getColorForHeight = (height) => {
+    if (height < 300) {
+      return 'rgba(173, 216, 230, 0.5)'; 
+    } else if (height >= 300 && height < 500) {
+      return 'rgba(144, 238, 144, 0.5)'; 
+    } else {
+      return 'rgba(255, 182, 193, 0.5)'; 
+    }
+  };
+
   return (
-    <div style={{ backgroundColor: `rgba(0, 0, 0, 0.${width})` }}>
+    <div style={{ backgroundColor: getColorForHeight(height) }}>
       <Head>
         <title>Cats' Intelligence</title>
         <meta name="description" content="Information about cats' intelligence" />
