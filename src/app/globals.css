@@ -2,7 +2,6 @@
   box-sizing: border-box;
   padding: 10px;
   margin: 0;
-  
 }
 
 html,
@@ -63,7 +62,6 @@ h1 {
   text-align: center;
 }
 
-
 .cats img {
   max-width: 100%; 
   height: auto;
@@ -72,10 +70,7 @@ h1 {
 .cat-images img {
   text-align: center;
   margin: 10px;
-}
-
-
-.cat-images img {
   height: auto;
   width: 550px;
 }
+

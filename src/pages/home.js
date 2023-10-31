@@ -25,7 +25,7 @@ const Home = () => {
     fetchNewCatImage();
   }, []);
 
-  const getColorForHeight = (height) => {
+  const changeColor = (height) => {
     if (height < 300) {
       return 'rgba(173, 216, 230, 0.5)'; 
     } else if (height >= 300 && height < 500) {
@@ -36,10 +36,10 @@ const Home = () => {
   };
 
   return (
-    <div style={{ backgroundColor: getColorForHeight(height) }}>
+    <div style={{ backgroundColor: changeColor(height) }}>
       <Head>
         <title>Cats' Intelligence</title>
-        <meta name="description" content="Information about cats' intelligence" />
+        <meta name="description" content="About cats' intelligence" />
       </Head>
       <Header/> 
       <main className={styles.main}>
@@ -52,15 +52,12 @@ const Home = () => {
               </button>
           </div>
           <div className={styles.content}>
-            <h1 className={styles.title}>Cats' Intelligence</h1>
+            <h1>Cats' Intelligence</h1>
             <p className={styles.paragraph}>
             The cat’s intellectual ability is highlighted by its ability to use the information retained to solve problems. Cats are able to form “learning sets,” a skill once thought to be confined to primates. For example, cats that were trained to pull boxes on wheels showed they could combine that skill with their own insight to solve new problems. In one instance, a cat pulled the box to a specific location and used it, step-stool fashion, to reach a desired reward: a piece of food suspended from the ceiling by a string. The full extent of the cat’s cognitive abilities is still largely unknown, but they continue to amaze their owners with their ingenious abilities, nevertheless.
 
 Cats learn by observation, imitation, trial and error just as humans do. Stories abound which describe cats turning doorknobs to open doors, ringing doorbells, opening cupboards, turning off lights, and even using the toilet solely by observing the owner performing these activities. Many feline behaviorists as well as child psychologists seem to agree that the intelligence of an adult cat equals that of a 2 to 3 year old child. We know how clever and manipulative children of this age are, is it any wonder that cats are better at training their owners than the owners are at training them?
             </p>
-            <div className={styles.buttons}>
-            
-            </div>
           </div>
         </div>
       </main>

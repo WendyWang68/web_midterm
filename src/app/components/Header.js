@@ -4,7 +4,7 @@ import styles from "./header.css";
 const Header = () => {
   const router = useRouter();
 
-  const handleNavigation = (path) => {
+  const navigateBar = (path) => {
     router.push(path);
   };
 
@@ -14,13 +14,13 @@ const Header = () => {
         <div className={styles.headerContainer}>
           <nav>
             <div className={styles.navContainer}>
-              <a href="/" onClick={(e) => { e.preventDefault(); handleNavigation('/') }}>Cat Facts</a>
-              <a href="/home" onClick={(e) => { e.preventDefault(); handleNavigation('/home') }}>Intelligence</a>
+              <a href="/" onClick={(e) => { e.preventDefault(); navigateBar('/') }}>Cat Facts</a>
+              <a href="/home" onClick={(e) => { e.preventDefault(); navigateBar('/home') }}>Intelligence</a>
             </div>
           </nav>
         </div>
       </header>
-      <hr className={styles.separator} />
+      <hr className={styles.separateline} />
     </div>
   );
 };

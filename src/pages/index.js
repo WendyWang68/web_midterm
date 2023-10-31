@@ -18,7 +18,7 @@ const renderDialog = (name)  => {
   alert(name)
 };
 
-export default function Home({ catFactsData, picData }) {
+export default function Home({ picData }) {
   const [catFacts, setCatFacts] = useState([]);
 
   useEffect(() => {
